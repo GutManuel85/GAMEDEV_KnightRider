@@ -37,14 +37,27 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
+        
         float hMovement = Input.GetAxis("Horizontal") / 2;
         float vMovement = 1;
+
+        Vector3 move = transform.position + new Vector3(hMovement, 0, vMovement) * movementSpeed * Time.deltaTime;
         
-        if(hMovement != 0)
+
+        if (hMovement != 0)
         {
             vMovement = 0.7f;
         }
-        _rigidbody.MovePosition(transform.position + new Vector3(hMovement, 0, vMovement) * movementSpeed * Time.deltaTime);
+
+        //with this method (moveposition) the player goes through the walls (ignore the physics), for this reason we set manually the limits on x axis
+        //if out of limits, move only forward
+        if (move.x < 9 && move.x > -9) _rigidbody.MovePosition(move);
+        else _rigidbody.MovePosition(transform.position + new Vector3(0, 0, vMovement) * movementSpeed * Time.deltaTime);
+
+        
+        //_rigidbody.MovePosition(transform.position + new Vector3(hMovement, 0, vMovement) * movementSpeed * Time.deltaTime);
+        
+
     }
 
     public Rigidbody GetRigidbody()

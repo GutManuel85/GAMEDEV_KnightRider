@@ -225,3 +225,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   spawnManager: {fileID: 0}
+  trafficSpawner: {fileID: 0}
