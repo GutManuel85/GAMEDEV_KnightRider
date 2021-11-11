@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 438996266767540713}
   - component: {fileID: 1034680139144819549}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TriggerCube
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,9 +56,9 @@ GameObject:
   - component: {fileID: 2615228951545118009}
   - component: {fileID: 2929811158020705119}
   - component: {fileID: 372755199037552082}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
