@@ -48,12 +48,17 @@ public class TrafficSpawner : MonoBehaviour
     {
         GameObject trafficObject1 = trafficList[Random.Range(0, trafficList.Count)];
         GameObject trafficObject2 = trafficList[Random.Range(0, trafficList.Count)];
+        Debug.Log("TrafficObject1: " + trafficObject1.name);
+        Debug.Log("TrafficObject2: " + trafficObject2.name);
 
-        distance1 = 200 + Random.Range(5, 15);
+        distance1 = 200 + Random.Range(5, 10);
         zPosition1 = playerController.GetRigidbody().transform.position.z + distance1;
+        Debug.Log("Distance 1 :" + distance1);
 
-        distance2 = 200 + Random.Range(45, 55);
+        distance2 = 200 + Random.Range(15, 20);
         zPosition2 = playerController.GetRigidbody().transform.position.z + distance2;
+        Debug.Log("Distance 2 :" + distance2);
+
 
         int trackNumber1 = Random.Range(1, 3);
 
@@ -67,7 +72,7 @@ public class TrafficSpawner : MonoBehaviour
             }
             else
             {
-                this.InstantiateTrafficObject(trafficObject1, xPositionTrack2);
+                this.InstantiateTrafficObject(trafficObject1, xPositionTrack3);
             }
         }
 
@@ -80,7 +85,7 @@ public class TrafficSpawner : MonoBehaviour
 
             if (trackNumber2 == 3)
             {
-                this.InstantiateTrafficObject(trafficObject2, xPositionTrack3);
+                this.InstantiateTrafficObject(trafficObject2, xPositionTrack2);
             }
             else
             {

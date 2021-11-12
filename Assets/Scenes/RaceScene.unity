@@ -1435,6 +1435,10 @@ MonoBehaviour:
   trafficList:
   - {fileID: 8833497269825417332, guid: 2c262a7364025c942bd5b9d1b80fc13f, type: 3}
   - {fileID: 8252884183654899995, guid: ebc820c971dde4c46a0ff2044b22d79d, type: 3}
+  - {fileID: 8252884183654899995, guid: ebc820c971dde4c46a0ff2044b22d79d, type: 3}
+  - {fileID: 8252884183654899995, guid: ebc820c971dde4c46a0ff2044b22d79d, type: 3}
+  - {fileID: 4210749416022684128, guid: 088f5ce86cc4b6c4f8afa49d923ed3e9, type: 3}
+  - {fileID: 4210749416022684128, guid: 088f5ce86cc4b6c4f8afa49d923ed3e9, type: 3}
   - {fileID: 4210749416022684128, guid: 088f5ce86cc4b6c4f8afa49d923ed3e9, type: 3}
   playerController: {fileID: 237651271}
 --- !u!4 &1777680297 stripped
