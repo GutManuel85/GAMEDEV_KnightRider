@@ -5,10 +5,10 @@ using UnityEngine;
 public class TrafficSpawner : MonoBehaviour
 {
  
-    private float xPositionTrack1 = -9f;
+    private float xPositionTrack1 = -7f;
     private float xPositionTrack2 = -2f;
-    private float xPositionTrack3 = 3f;
-    private float xPositionTrack4 = 9f;
+    private float xPositionTrack3 = 2f;
+    private float xPositionTrack4 = 7f;
     private float zPosition1;
     private float zPosition2;
     private float distance1;
@@ -62,45 +62,43 @@ public class TrafficSpawner : MonoBehaviour
 
         int trackNumber1 = Random.Range(1, 3);
 
-        int numberToTrafficOrNot = Random.Range(1, 3);
+        int numberToSetTrafficOrNot = Random.Range(1, 3);
 
-        if (numberToTrafficOrNot == 1)
+        if (numberToSetTrafficOrNot == 1)
         {
             if (trackNumber1 == 1)
             {
-                this.InstantiateTrafficObject(trafficObject1, xPositionTrack1);
+                this.InstantiateTrafficObject(trafficObject1, xPositionTrack1, zPosition1);
             }
             else
             {
-                this.InstantiateTrafficObject(trafficObject1, xPositionTrack3);
+                this.InstantiateTrafficObject(trafficObject1, xPositionTrack3, zPosition1);
             }
         }
 
         int trackNumber2 = Random.Range(3, 5);
 
-        numberToTrafficOrNot = Random.Range(1, 3);
+        numberToSetTrafficOrNot = Random.Range(1, 3);
 
-        if (numberToTrafficOrNot == 1)
+        if (numberToSetTrafficOrNot == 1)
         {
 
             if (trackNumber2 == 3)
             {
-                this.InstantiateTrafficObject(trafficObject2, xPositionTrack2);
+                this.InstantiateTrafficObject(trafficObject2, xPositionTrack2, zPosition2);
             }
             else
             {
-                this.InstantiateTrafficObject(trafficObject2, xPositionTrack4);
+                this.InstantiateTrafficObject(trafficObject2, xPositionTrack4, zPosition2);
             }
         }
 
     }
 
-private void InstantiateTrafficObject(GameObject trafficObject, float xPostion)
+private void InstantiateTrafficObject(GameObject trafficObject, float xPostion, float zPosition)
     {
         GameObject traffic1 = Instantiate(trafficObject, new Vector3(xPostion, 0f, zPosition1), new Quaternion(0, 0, 0, 0));
-        GameObject traffic2 = Instantiate(trafficObject, new Vector3(xPostion, 0f, zPosition2), new Quaternion(0, 0, 0, 0));
         rigidbodyList.Add(traffic1.GetComponent<Rigidbody>());
-        rigidbodyList.Add(traffic2.GetComponent<Rigidbody>());
     }
 
     private int getSpeed()
