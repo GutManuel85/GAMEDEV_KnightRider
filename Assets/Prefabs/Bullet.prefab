@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2616497952564543428}
   - component: {fileID: 1745682410884736}
   - component: {fileID: 194579895289499055}
-  - component: {fileID: 8215671593993483463}
-  m_Layer: 6
+  - component: {fileID: 5379886451854994157}
+  m_Layer: 9
   m_Name: Trigger_Cube
-  m_TagString: Traffic
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615947206872999421}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 3, y: 2, z: 3}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4181722925546839150}
   m_RootOrder: 1
@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615947206872999421}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &194579895289499055
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a62177f4325a642de997a9ed39932a57, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8215671593993483463
-BoxCollider:
+--- !u!136 &5379886451854994157
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,9 +92,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5029085
+  m_Height: 1.962369
+  m_Direction: 1
+  m_Center: {x: 0.00493516, y: 0.01234031, z: 0.01679754}
 --- !u!1 &4965482601441701409
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,10 +107,10 @@ GameObject:
   - component: {fileID: 1123947243814771419}
   - component: {fileID: 3940848129727870255}
   - component: {fileID: 5904129405622004621}
-  - component: {fileID: 696347059572064161}
-  m_Layer: 6
+  - component: {fileID: 7787282484906563388}
+  m_Layer: 10
   m_Name: Collision_Cube
-  m_TagString: Traffic
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,9 +122,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4965482601441701409}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 3, y: 2, z: 3}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4181722925546839150}
   m_RootOrder: 0
@@ -135,7 +136,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4965482601441701409}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &5904129405622004621
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a62177f4325a642de997a9ed39932a57, type: 2}
+  - {fileID: 2100000, guid: ffea9a2351f882244a3ad4eb1f8d1149, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -177,8 +178,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &696347059572064161
-BoxCollider:
+--- !u!136 &7787282484906563388
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -187,9 +188,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.50290847
+  m_Height: 1.9623692
+  m_Direction: 1
+  m_Center: {x: 0.0049351603, y: 0.012340306, z: 0.016797543}
 --- !u!1 &8833497269825417332
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,9 +202,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4181722925546839150}
   - component: {fileID: -186209335691045356}
-  m_Layer: 6
-  m_Name: Car
-  m_TagString: Traffic
+  - component: {fileID: 3038021078248850234}
+  m_Layer: 9
+  m_Name: Bullet
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,8 +237,20 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &3038021078248850234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8833497269825417332}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbe737b49fe249d39d3dcae8b898a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

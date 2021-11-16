@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 
     public SpawnManager spawnManager;
     public TrafficSpawner trafficSpawner;
+    public BulletSpawner bulletSpawner;
+    public BulletManager bulletManager;
     public LifeManager lifeManager;
     public TimeManager timeManager;
 
@@ -38,10 +40,18 @@ public class PlayerController : MonoBehaviour
             print("Print: Reduce Life");
             lifeManager.reduceLife();
         }
+
+        if (other.tag == "Bullet")
+        {
+            print("Print: Add Bullet");
+            bulletManager.addBullet();
+        }
+
         if (other.tag == "Road")
         {
             spawnManager.SpawnTriggerEntered();
             trafficSpawner.TransferTraffic();
+            bulletSpawner.TransferBullet();
         }
     }
 

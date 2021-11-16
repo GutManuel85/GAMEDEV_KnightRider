@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Traffic
   - Road
+  - Bullet
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - Traffic
   - Road
   - TrafficTrigger
-  - 
-  - 
+  - BulletTrigger
+  - Bullet
   - 
   - 
   - 

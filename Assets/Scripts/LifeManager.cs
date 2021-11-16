@@ -40,7 +40,8 @@ public class LifeManager : MonoBehaviour
         lifeAmount--;
     }
 
-    private void stoppGame() {
+    private void stoppGame()
+    {
         Time.timeScale = 0;
-            }
+    }
 }
