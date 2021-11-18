@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public BulletManager bulletManager;
     public LifeManager lifeManager;
     public TimeManager timeManager;
+    public CameraController cameraController;
 
     private Rigidbody _rigidbody;
 
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
         if(other.tag == "Traffic")
         {
+            print("Shake Camera");
+            cameraController.shakeCamera();
             print("Print: Reduce Life");
             lifeManager.reduceLife();
         }

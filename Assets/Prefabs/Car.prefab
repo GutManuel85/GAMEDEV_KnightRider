@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1745682410884736}
   - component: {fileID: 194579895289499055}
   - component: {fileID: 8215671593993483463}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Trigger_Cube
   m_TagString: Traffic
   m_Icon: {fileID: 0}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4495005, g: 0.49649566, b: 0.55914617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44950014, g: 0.4964953, b: 0.5591459, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -682,6 +682,53 @@ MonoBehaviour:
   - {fileID: 1380666430}
   - {fileID: 1236223150}
   - {fileID: 383469009}
+--- !u!1 &524834211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524834213}
+  - component: {fileID: 524834212}
+  m_Layer: 0
+  m_Name: CameraController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &524834212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524834211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c36816a7fd80dd48b541eea59c5813c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 0.1
+  duration: 0.5
+  slowDownFactor: 1
+  environmentLight: {fileID: 705507994}
+--- !u!4 &524834213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524834211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.8, z: -15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553069305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,7 +1145,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Shots:'
+  m_Text: 'Bullets:'
 --- !u!222 &866439035
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2054,7 +2101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720280044092005828, guid: 5c21119201d61104295aab4af9656082, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4745585344398524434, guid: 5c21119201d61104295aab4af9656082, type: 3}
       propertyPath: m_Name
@@ -2092,6 +2139,10 @@ PrefabInstance:
       propertyPath: trafficSpawner
       value: 
       objectReference: {fileID: 1631911630}
+    - target: {fileID: 5424192655349259044, guid: 5c21119201d61104295aab4af9656082, type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 524834212}
     - target: {fileID: 5424192655349259044, guid: 5c21119201d61104295aab4af9656082, type: 3}
       propertyPath: projectileSpawner
       value: 
