@@ -67,11 +67,11 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = transform.position + new Vector3(hMovement, 0, vMovement) * getSpeed() * Time.deltaTime;
         
-
-        if (hMovement != 0)
-        {
-            vMovement = 0.7f;
-        }
+        //This part slow the player on limits. No more needed
+        //if (hMovement != 0)
+        //{
+        //    vMovement = 0.7f;
+        //}
 
         //with this method (moveposition) the player goes through the walls (ignore the physics), for this reason we set manually the limits on x axis
         //if out of limits, move only forward
