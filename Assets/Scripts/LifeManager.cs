@@ -24,7 +24,7 @@ public class LifeManager : MonoBehaviour
     public void reduceLife()
     {
 
-           if (lifeAmount == 1)
+        if (lifeAmount == 1)
         {
             Destroy(lives[0]);
             stoppGame();

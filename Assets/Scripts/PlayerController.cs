@@ -66,16 +66,10 @@ public class PlayerController : MonoBehaviour
         float vMovement = 1;
 
         Vector3 move = transform.position + new Vector3(hMovement, 0, vMovement) * getSpeed() * Time.deltaTime;
-        
-        //This part slow the player on limits. No more needed
-        //if (hMovement != 0)
-        //{
-        //    vMovement = 0.7f;
-        //}
 
         //with this method (moveposition) the player goes through the walls (ignore the physics), for this reason we set manually the limits on x axis
         //if out of limits, move only forward
-        if (move.x < 9 && move.x > -9) _rigidbody.MovePosition(move);
+        if (move.x < 8.9 && move.x > -8.9) _rigidbody.MovePosition(move);
         else _rigidbody.MovePosition(transform.position + new Vector3(0, 0, vMovement) * getSpeed() * Time.deltaTime);
 
         
