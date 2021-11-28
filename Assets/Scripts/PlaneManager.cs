@@ -17,7 +17,7 @@ public class PlaneManager : MonoBehaviour
     {
         for(int i = 0; i < initAmount; i++)
         {
-            TransferPlane();
+            CreatePlane();
         }
     }
 
@@ -27,7 +27,7 @@ public class PlaneManager : MonoBehaviour
         
     }
 
-    public void TransferPlane()
+    public void CreatePlane()
     {
         GameObject planeLeft = planeList[Random.Range(0, planeList.Count)];
         GameObject planeRight = planeList[Random.Range(0, planeList.Count)];

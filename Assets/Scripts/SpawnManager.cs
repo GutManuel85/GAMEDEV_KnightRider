@@ -25,6 +25,6 @@ public class SpawnManager : MonoBehaviour
     public void SpawnTriggerEntered()
     {
         roadController.TransferRoad();
-        planeManager.TransferPlane();
+        planeManager.CreatePlane();
     }
 }
