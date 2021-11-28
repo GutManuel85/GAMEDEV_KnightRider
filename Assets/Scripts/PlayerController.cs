@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     
     private Rigidbody _rigidbody;
     private bool _isInvulnerable;
+    private int _speed;
 
     // Start is called before the first frame update
     void Start()
@@ -71,11 +72,13 @@ public class PlayerController : MonoBehaviour
         float hMovement = Input.GetAxis("Horizontal") / 2;
         float vMovement = 1;
 
-        Vector3 move = transform.position + new Vector3(hMovement, 0, vMovement) * getSpeed() * Time.deltaTime;
+        SetSpeed();
+
+        Vector3 move = transform.position + new Vector3(hMovement, 0, vMovement) * _speed * Time.deltaTime;
 
         //if out of limits, move only forward
         if (move.x < 8.9 && move.x > -8.9) _rigidbody.MovePosition(move);
-        else _rigidbody.MovePosition(transform.position + new Vector3(0, 0, vMovement) * getSpeed() * Time.deltaTime);        
+        else _rigidbody.MovePosition(transform.position + new Vector3(0, 0, vMovement) * _speed * Time.deltaTime);        
     }
 
     public Rigidbody GetRigidbody()
@@ -83,9 +86,26 @@ public class PlayerController : MonoBehaviour
         return this._rigidbody;
     }
 
-    private int getSpeed()
+    private void SetSpeed()
     {
-        return Mathf.RoundToInt((float)(30 + timeManager.getTime()));
+        float time = timeManager.getTime();
+        if (time < 30)
+        {
+            _speed = Mathf.RoundToInt((30 + time));
+            Debug.Log("Speedlevel 1");
+        }
+        else if (time < 60)
+        {
+            _speed = Mathf.RoundToInt((50 + (time / 3)));
+            Debug.Log("Speedlevel 2");
+        }
+        else
+        {
+            _speed = Mathf.RoundToInt((60 + (time / 6)));
+            Debug.Log("Speedlevel 3");
+        }
+        Debug.Log("Time: " + time.ToString());
+        Debug.Log("Speed: " + _speed.ToString());
     }
 
     private IEnumerator SetInvulnerable()
