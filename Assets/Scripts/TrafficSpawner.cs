@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrafficSpawner : MonoBehaviour
 {
- 
+
     private float xPositionTrack1 = -7f;
     private float xPositionTrack2 = -2f;
     private float xPositionTrack3 = 2f;
@@ -36,9 +36,9 @@ public class TrafficSpawner : MonoBehaviour
     {
         if (rigidbodyList != null && rigidbodyList.Count != 0)
         {
-            foreach(Rigidbody element in rigidbodyList)
+            foreach (Rigidbody element in rigidbodyList)
             {
-                element.MovePosition(element.transform.position + new Vector3(0, 0, 1) * - getSpeed() * Time.deltaTime);
+                element.MovePosition(element.transform.position + new Vector3(0, 0, 1) * -getSpeed() * Time.deltaTime);
             }
 
         }
@@ -95,7 +95,7 @@ public class TrafficSpawner : MonoBehaviour
 
     }
 
-private void InstantiateTrafficObject(GameObject trafficObject, float xPostion, float zPosition)
+    private void InstantiateTrafficObject(GameObject trafficObject, float xPostion, float zPosition)
     {
         GameObject traffic1 = Instantiate(trafficObject, new Vector3(xPostion, 0f, zPosition1), new Quaternion(0, 0, 0, 0));
         rigidbodyList.Add(traffic1.GetComponent<Rigidbody>());

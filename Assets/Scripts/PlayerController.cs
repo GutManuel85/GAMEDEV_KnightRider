@@ -65,7 +65,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     private void Move()
     {
         
@@ -92,20 +91,15 @@ public class PlayerController : MonoBehaviour
         if (time < 30)
         {
             _speed = Mathf.RoundToInt((30 + time));
-            Debug.Log("Speedlevel 1");
         }
         else if (time < 60)
         {
             _speed = Mathf.RoundToInt((50 + (time / 3)));
-            Debug.Log("Speedlevel 2");
         }
         else
         {
             _speed = Mathf.RoundToInt((60 + (time / 6)));
-            Debug.Log("Speedlevel 3");
         }
-        Debug.Log("Time: " + time.ToString());
-        Debug.Log("Speed: " + _speed.ToString());
     }
 
     private IEnumerator SetInvulnerable()
