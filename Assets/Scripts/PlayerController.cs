@@ -12,13 +12,15 @@ public class PlayerController : MonoBehaviour
     public LifeManager lifeManager;
     public TimeManager timeManager;
     public CameraController cameraController;
-
+    
     private Rigidbody _rigidbody;
+    private bool _isInvulnerable;
 
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = this.GetComponent<Rigidbody>();
+        _isInvulnerable = false;
     }
 
     // Update is called once per frame
@@ -38,10 +40,14 @@ public class PlayerController : MonoBehaviour
 
         if(other.tag == "Traffic")
         {
-            print("Shake Camera");
-            cameraController.shakeCamera();
-            print("Print: Reduce Life");
-            lifeManager.reduceLife();
+            if (!_isInvulnerable)
+            {
+                print("Shake Camera");
+                cameraController.shakeCamera();
+                print("Print: Reduce Life");
+                lifeManager.reduceLife();
+                StartCoroutine("SetInvulnerable");
+            }
         }
 
         if (other.tag == "Bullet")
@@ -67,15 +73,9 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = transform.position + new Vector3(hMovement, 0, vMovement) * getSpeed() * Time.deltaTime;
 
-        //with this method (moveposition) the player goes through the walls (ignore the physics), for this reason we set manually the limits on x axis
         //if out of limits, move only forward
         if (move.x < 8.9 && move.x > -8.9) _rigidbody.MovePosition(move);
-        else _rigidbody.MovePosition(transform.position + new Vector3(0, 0, vMovement) * getSpeed() * Time.deltaTime);
-
-        
-        //_rigidbody.MovePosition(transform.position + new Vector3(hMovement, 0, vMovement) * movementSpeed * Time.deltaTime);
-        
-
+        else _rigidbody.MovePosition(transform.position + new Vector3(0, 0, vMovement) * getSpeed() * Time.deltaTime);        
     }
 
     public Rigidbody GetRigidbody()
@@ -88,5 +88,10 @@ public class PlayerController : MonoBehaviour
         return Mathf.RoundToInt((float)(30 + timeManager.getTime()));
     }
 
-
+    private IEnumerator SetInvulnerable()
+    {
+        _isInvulnerable = true;
+        yield return new WaitForSeconds(3f);
+        _isInvulnerable = false;
+    }
 }
