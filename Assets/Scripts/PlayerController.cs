@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator SetInvulnerable()
     {
         _isInvulnerable = true;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         _isInvulnerable = false;
     }
 }
