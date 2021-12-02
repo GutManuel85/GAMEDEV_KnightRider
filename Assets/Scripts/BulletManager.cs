@@ -26,4 +26,14 @@ public class BulletManager : MonoBehaviour
     {
         bulletAmount++;
     }
+
+    public void removeBullet()
+    {
+        bulletAmount--;
+    }
+
+    public int getBulletAmount()
+    {
+        return bulletAmount;
+    }
 }

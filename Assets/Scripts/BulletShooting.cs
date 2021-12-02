@@ -5,7 +5,9 @@ using UnityEngine;
 public class BulletShooting : MonoBehaviour
 {
     public GameObject bullet;
-    public float speed = 10000f;
+    public float speed = 15000f;
+    public AudioSource audio;
+    public BulletManager bm;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +24,13 @@ public class BulletShooting : MonoBehaviour
 
     private void Shoot()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && bm.getBulletAmount() > 0)
         {
             GameObject instBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
             Rigidbody instBulletRigidbody = instBullet.GetComponent<Rigidbody>();
             instBulletRigidbody.AddForce(transform.forward * speed);
+            audio.Play();
+            bm.removeBullet();
         }
     }
 

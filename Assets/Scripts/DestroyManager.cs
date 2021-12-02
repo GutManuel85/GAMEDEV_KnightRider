@@ -25,7 +25,7 @@ public class DestroyManager : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("OnTriggerExit() aufgerufen");
-        if (other.tag == "Traffic" || other.tag == "Bullet" || other.tag == "Plane")
+        if (other.tag == "Traffic" || other.tag == "Bullet" || other.tag == "Plane" || other.tag == "BulletShoot(Clone)")
         {
             Destroy(other.gameObject);
             Debug.Log("Destroy Object");
