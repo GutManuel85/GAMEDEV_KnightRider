@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class BulletShootingDestroy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        //Destroy(gameObject, 1.0f);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
-        Debug.Log("########################################################################");
+        if (collision.gameObject.name == "Car(Clone)") Destroy(gameObject);
+        if (collision.gameObject.name == "Bus(Clone)") Destroy(gameObject);
+        if (collision.gameObject.name == "Truck(Clone)") Destroy(gameObject);
     }
 }

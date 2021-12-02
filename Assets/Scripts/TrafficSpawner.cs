@@ -34,14 +34,19 @@ public class TrafficSpawner : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rigidbodyList != null && rigidbodyList.Count != 0)
+        try
         {
-            foreach (Rigidbody element in rigidbodyList)
+            if (rigidbodyList != null && rigidbodyList.Count != 0)
             {
-                element.MovePosition(element.transform.position + new Vector3(0, 0, 1) * -getSpeed() * Time.deltaTime);
-            }
+                foreach (Rigidbody element in rigidbodyList)
+                {
+                    element.MovePosition(element.transform.position + new Vector3(0, 0, 1) * -getSpeed() * Time.deltaTime);
+                }
 
+            }
         }
+        catch(MissingReferenceException e) { }
+        
     }
 
     public void TransferTraffic()
