@@ -8,6 +8,7 @@ public class LifeManager : MonoBehaviour
 
     public GameObject[] lives;
     private int lifeAmount = 3;
+    public GameObject gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -44,5 +45,6 @@ public class LifeManager : MonoBehaviour
     private void stoppGame()
     {
         Time.timeScale = 0;
+        gameOver.SetActive(true);
     }
 }
