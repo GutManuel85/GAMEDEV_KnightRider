@@ -30,18 +30,6 @@ public class BulletSpawner : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        if (rigidbodyList != null && rigidbodyList.Count != 0)
-        {
-            foreach (Rigidbody element in rigidbodyList)
-            {
-                element.MovePosition(element.transform.position + new Vector3(0, 0, 1) * - getSpeed() * Time.deltaTime);
-            }
-
-        }
-    }
-
     public void TransferBullet()
     {
         GameObject bulletObject1 = trafficList[Random.Range(0, trafficList.Count)];
@@ -84,11 +72,6 @@ public class BulletSpawner : MonoBehaviour
     {
         GameObject bullet = Instantiate(trafficObject, new Vector3(xPostion, 0f, zPosition1), new Quaternion(0, 0, 0, 0));
         rigidbodyList.Add(bullet.GetComponent<Rigidbody>());
-    }
-
-    private int getSpeed()
-    {
-        return Mathf.RoundToInt((float)(10 + timeManager.getTime() * 0.5));
     }
 
 }

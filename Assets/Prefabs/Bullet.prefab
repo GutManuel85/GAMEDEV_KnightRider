@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615947206872999421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.8, z: 0.4}
   m_Children: []
   m_Father: {fileID: 4181722925546839150}
   m_RootOrder: 1
@@ -123,8 +123,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4965482601441701409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.8, z: 0.4}
   m_Children: []
   m_Father: {fileID: 4181722925546839150}
   m_RootOrder: 0
@@ -202,10 +202,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4181722925546839150}
   - component: {fileID: -186209335691045356}
-  - component: {fileID: 3038021078248850234}
+  - component: {fileID: 4535164814372155927}
   m_Layer: 9
   m_Name: Bullet
-  m_TagString: Projectile
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,15 +242,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &3038021078248850234
+--- !u!114 &4535164814372155927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8833497269825417332}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bbe737b49fe249d39d3dcae8b898a53, type: 3}
+  m_Script: {fileID: 11500000, guid: e21e80d226cca4b59ba57651f4734e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

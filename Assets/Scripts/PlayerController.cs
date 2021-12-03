@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -35,7 +34,7 @@ public class PlayerController : MonoBehaviour
         this.Move();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) 
     {
         print("Print: PlayerController.OnTriggerEnter()");
 
