@@ -16,6 +16,7 @@ public class EnemyDestroy : MonoBehaviour
             ParticleSystem a = Instantiate(ps, new Vector3(gameObject.transform.position.x, 1.5f, gameObject.transform.position.z), Quaternion.identity);
             a.Play();
             Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }

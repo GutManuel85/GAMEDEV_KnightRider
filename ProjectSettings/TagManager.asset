@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Plane
   - House
+  - BulletShot
   layers:
   - Default
   - TransparentFX

@@ -7,14 +7,12 @@ public class BulletShootingDestroy : MonoBehaviour
     private void Update()
     {
         
-        
-        //Destroy(gameObject, 1.0f);
-    }
+     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.name == "Car(Clone)") Destroy(gameObject);
-        if (collision.gameObject.name == "Bus(Clone)") Destroy(gameObject);
-        if (collision.gameObject.name == "Truck(Clone)") Destroy(gameObject);
+        print("xxx");
+        if (other.gameObject.tag == "Traffic") Destroy(gameObject);
+        if (other.gameObject.tag == "Traffic") Destroy(other.gameObject);
     }
 }
