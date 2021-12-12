@@ -45,8 +45,9 @@ public class TrafficSpawner : MonoBehaviour
 
             }
         }
-        catch(MissingReferenceException e) { }
-        
+        catch(MissingReferenceException e) {
+            Debug.Log(e.StackTrace);
+        }      
     }
 
     public void TransferTraffic()
@@ -112,7 +113,7 @@ public class TrafficSpawner : MonoBehaviour
 
     private int getSpeed()
     {
-        return Mathf.RoundToInt((float)(10 + timeManager.getTime() * 0.5));
+        return Mathf.RoundToInt((float)(20 + timeManager.getTime() * 0.5));
     }
 
 }

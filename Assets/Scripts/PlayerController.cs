@@ -89,15 +89,15 @@ public class PlayerController : MonoBehaviour
         float time = timeManager.getTime();
         if (time < 30)
         {
-            _speed = Mathf.RoundToInt((30 + time));
+            _speed = Mathf.RoundToInt((20 + time));
         }
         else if (time < 60)
         {
-            _speed = Mathf.RoundToInt((50 + (time / 3)));
+            _speed = Mathf.RoundToInt((40 + (time / 3)));
         }
         else
         {
-            _speed = Mathf.RoundToInt((60 + (time / 6)));
+            _speed = Mathf.RoundToInt((50 + (time / 6)));
         }
     }
 
