@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletShootingDestroy : MonoBehaviour
 {
+
     private void Update()
     {
         

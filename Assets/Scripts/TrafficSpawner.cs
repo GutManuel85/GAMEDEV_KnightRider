@@ -103,6 +103,10 @@ public class TrafficSpawner : MonoBehaviour
     private void InstantiateTrafficObject(GameObject trafficObject, float xPostion, float zPosition)
     {
         GameObject traffic1 = Instantiate(trafficObject, new Vector3(xPostion, 0f, zPosition1), new Quaternion(0, 0, 0, 0));
+        if(trafficObject.name == "Car_evil")
+        {
+            traffic1.GetComponent<EnemyDestroy>().sm = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        }
         rigidbodyList.Add(traffic1.GetComponent<Rigidbody>());
     }
 
