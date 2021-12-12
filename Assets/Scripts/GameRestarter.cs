@@ -24,6 +24,7 @@ public class GameRestarter : MonoBehaviour
 
     public void goToMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("StartMenu");
     }
 
